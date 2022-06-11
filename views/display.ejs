@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>
+            display
+        </title>
+        <style>
+            .heading{
+                font-family: Grape Nuts;
+                font-size: 35px;
+                color: black;
+                display: flex;
+                justify-content: center;
+                padding: 5px;
+            }
+            .formback
+            {
+                width: 80%;
+                height: 85%;
+                background-color: white;
+                border-radius: 25px;
+                padding: 10px;
+            }
+            .maincontainer
+            {
+                width: 100%;
+                height: 100%;
+                background-color: #ff9900;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+            }
+            
+
+            .gap{
+                display: flex;
+                justify-content: space-around;
+            }
+            .row{
+                display: flex;
+                height: 12%;
+                
+            }
+
+        </style>
+        
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="/javascripts/project.js"></script>
+    
+    <script>
+         $(document).ready(function(){
+    $('select').formSelect();
+  });
+    </script>
+    </head>
+    <body>
+        <div class="maincontainer">
+            <div class="formback">
+
+                <div class="heading">
+                    <tr>
+                        <td><img src="/images/Swiggy.png" alt="" width="30px"></td>
+                        <td>Food Enquiry System</td>
+                    </tr>
+                </div>
+
+                <table class="striped">
+                    <thead>
+                        <tr>
+                            <th>Food ID</th>
+                            <th>Quisine</th>
+                            <th>Customer name</th>
+                            <th>Food name</th>
+                            <th>Veg/Non-veg</th>
+                            <th>Price</th>
+                            <th>Offer Price</th>
+                            <th>Image</th>
+                            <th>ingredients</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% data.map((item)=>{ %>
+                            <tr>
+                                <td><%=item.foodlistid%></td>
+                                <td><%=item.cn%></td>
+                                <td><%=item.customername%></td>
+                                <td><%=item.fn%></td>
+                                <td><%=item.foodtype%></td>
+                                <td><%=item.price%></td>
+                                <td><%=item.offerprice%></td>
+                                <td>
+                                    <a href="/food/showpic?foodlistid=<%=item.foodlistid%>&foodname=<%=item.fn%>&file=<%=item.file%>">
+                                        <img src="/images/<%=item.file%>" width="40" alt="<%=item.file%>">
+                                    </a>
+                                </td>
+                                <td><%=item.ingredients%></td>
+                                <td><a href="/food/displaybyid?foodlistid=<%=item.foodlistid%>">update</td>
+                            </tr>
+
+                        <% }) %>   
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>

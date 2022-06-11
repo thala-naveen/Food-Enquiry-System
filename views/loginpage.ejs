@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>
+            login page
+        </title>
+        <style>
+            .maincontainer{
+                width: 100%;
+                height: 100%;
+                
+                
+                background-color: #ff9900;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                
+                
+                
+            }
+            .image
+            {
+                width: 100%;
+                height: 100%;
+                
+                
+                
+            }
+            .blank{
+                width: 20%;
+                height: 70%;
+                background-color: white;
+                border-radius: 25px;
+                padding: 10px;
+                margin-left: 40%;
+                margin-top: 9%;
+                
+            }
+            .icon
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .name{
+                padding-top: 25px;
+            }
+            .signin{
+                display: flex;
+                justify-content: center;
+                padding-top: 5px;
+            }
+            
+
+        </style>
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="/javascripts/project.js"></script>
+    </head>
+        <body>
+            
+                <div class="maincontainer">
+                    <div class="image">
+                    <form action="/admin/checklogin" method="post">
+                        <div class="blank">
+                            <div class="icon">
+                                <img src="/images/Swiggy.png" alt="icon" width="100px">
+                            </div>
+                            <div class="name">
+                                <div class="input-field">
+                                <i class="material-icons prefix">account_circle</i>
+                                <input id="icon_prefix" type="email" class="validate" name="mail">
+                                <label for="icon_prefix">Enter Email</label>
+                                </div>
+
+                                <div class="input-field">
+                                    <i class="material-icons prefix">lock</i>
+                                    <input id="icon_pass" type="password" class="validate" name="pass">
+                                    <label for="icon_pass">Password</label>
+                                </div>
+
+                                <div class="signin">
+                                    <button class="btn" type="submit" name="action" style="color:#ff9900; background-color: white;">Sign in
+                                        <i class="material-icons right">arrow_forward</i>
+                                      </button>
+                                </div>
+                                
+                                    <h2 style="display: flex; justify-content: center;align-items: center;font-size: 10px;color: red;"><%=msg%></h2>
+                                
+                                    <div class="progress">
+                                        <div class="indeterminate"></div>
+                                    </div>
+                                          
+                            </div>  
+                            
+                        </div> 
+                    </form>
+                    </div>
+
+                </div>
+                   
+        </body>
+</html>

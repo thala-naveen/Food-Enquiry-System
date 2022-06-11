@@ -1,0 +1,89 @@
+<html>
+    <head>
+        <title>
+            login page
+        </title>
+        <style>
+            .maincontainer{
+                width: 100%;
+                height: 100%;
+                
+                
+                background-color: #ff9900;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                
+                
+                
+            }
+            .image
+            {
+                width: 100%;
+                height: 100%;
+                
+                
+                
+            }
+            .blank{
+                width: 20%;
+                height: 70%;
+                background-color: white;
+                border-radius: 25px;
+                padding: 10px;
+                margin-left: 40%;
+                margin-top: 9%;
+                
+            }
+            .icon
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .name{
+                padding-top: 25px;
+            }
+            .signin{
+                display: flex;
+                justify-content: center;
+                padding-top: 5px;
+            }
+            
+
+        </style>
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="/javascripts/project.js"></script>
+    </head>
+        <body>
+            <nav style="background-color: black;color: white;">
+                <div class="nav-wrapper container">
+                  <a href="#" class="brand-logo"><i class="material-icons">restaurant</i>Logo</a>
+                  <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="/food/addnewfood" target="mw">Add New Food</a></li>
+                    <li><a href="/food/displayall" target="mw">List Foods</a></li>
+                    <li><a href="/admin/loginpage" target="_self">Logout</a></li>
+                    <li><h5 style="font-size:large;display: flex;justify-content: center;align-items: center;padding-top: 5px;padding-left: 3px;padding-right: 10px;"><%=result.adminname%></h5></li>
+                    <li><img src="/images/<%=result.pic%>" alt="pic"  style="padding-left:10px; padding-top:7px;height: 50px;width: 50px;border-radius: 50%"></li>
+                  </ul>
+                </div>
+              </nav>
+              
+              <iframe name="mw" frameborder="0" width="100%" height="100%">
+
+              </iframe>
+
+
+        </body>
+    </html>    

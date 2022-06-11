@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>
+            login page
+        </title>
+        <style>
+            .maincontainer{
+                width: 100%;
+                height: 100%;
+                
+                
+                background-color: #ff9900;
+                background-size: cover;
+                display: flex;
+                align-items: center;
+                
+                
+                
+            }
+            .image
+            {
+                width: 100%;
+                height: 100%;
+                
+                
+                
+            }
+            .blank{
+                width: 20%;
+                height: 70%;
+                background-color: white;
+                border-radius: 25px;
+                padding: 10px;
+                margin-left: 40%;
+                margin-top: 9%;
+                
+            }
+            .icon
+            {
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+            }
+            .name{
+                padding-top: 25px;
+            }
+            .signin{
+                display: flex;
+                justify-content: center;
+                padding-top: 5px;
+            }
+            
+
+        </style>
+        <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script src="/javascripts/project.js"></script>
+    <script>
+       $(document).ready(function(){
+    $('.sidenav').sidenav();
+  });
+      
+    </script>
+    </head>
+        <body>
+            
+                <div class="maincontainer">
+                    <div class="image">
+                    <form action="/food/go">
+                        <div class="blank">
+                            <div class="icon">
+                                <img src="/images/Swiggy.png" alt="icon" width="100px">
+                            </div>
+                              
+                            <nav style="background-color: #ff9900;height: 0px;margin-top: 20px;margin-bottom: 10px;"> <!-- navbar content here  --> </nav>
+
+                            <ul id="slide-out" class="sidenav">
+                              
+                              <li><a href="#!"><i class="material-icons">cloud</i>Welcome to Swiggy</a></li>
+                              <li><div class="divider"></div></li>
+                              <li><a href="/food/logs">Admin Login</a></li>
+                              
+                              <li><a class="waves-effect" href="#!">Be an Administrator</a></li>
+                            </ul>
+                            <a href="#!" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+                                  
+                            <div class="go">
+                              <div class="col s4" style="display: flex;justify-content: center;margin-top: 40px;">
+                                <button class="btn waves-effect waves-light" style="display: flex;justify-content: center;background-color: #ff9900;width: 130px;" type="submit" name="action">GO!
+                                    <i class="material-icons right" >search</i>
+                                  </button>
+                                        
+                            </div>
+                            </div>
+                            
+                        </div> 
+                    </form>
+                    </div>
+
+                </div>
+                   
+        </body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+</html>
